@@ -49,4 +49,8 @@ public class IndexAction {
     	}
         return "top.jsp";
 	}
+    
+//    public String test(){
+//    
+//    }return;
 }
