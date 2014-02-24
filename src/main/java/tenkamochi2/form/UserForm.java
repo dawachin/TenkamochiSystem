@@ -3,7 +3,7 @@ package tenkamochi2.form;
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
 
-public class IndexForm {
+public class UserForm {
 	
 	@Required
 	@Maxlength(maxlength=10)

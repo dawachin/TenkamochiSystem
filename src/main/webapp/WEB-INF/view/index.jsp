@@ -1,29 +1,16 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dolteng Auto Generated</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>トップページ</title>
 </head>
 <body>
-<h1>Topページ予定地</h1>
-<s:form method="POST">
-<table>
-	<tr>
-		<th>ユーザー名</th>
-		<td>
-			<html:text property="userName" />
-			<html:errors property="userName"/>
-		</td>
-	</tr>
-	<tr>
-		<th>パスワード</th>
-		<td>
-			<html:password property="password" />
-			<html:errors property="password" />
-		</td>
-	</tr>
-</table>
-<s:submit property="login" value="ログイン" />
-</s:form>
+	<h1>トップページ</h1>
 
+	メールアドレス<br/>
+	ここに表示「<b>${userDto.userName}</b>」<br/>
+
+	<br/>
+
+	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>
 </body>
 </html>
