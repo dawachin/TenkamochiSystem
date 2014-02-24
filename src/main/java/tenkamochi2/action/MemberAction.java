@@ -65,16 +65,7 @@ public class MemberAction {
     	tMemberService.insert(emp);
         return "memberconform.jsp";
 	}
-    
-//    @Execute(validator = false)
-//    public String complete() {
-//    	
-//    	Member emp = Beans.createAndCopy(Member.class, memberForm).execute();
-//    	memberService.insert(emp);
-//    	
-//    	return "membercomplete.jsp";
-//    }
-    
+        
 }
 
 	
