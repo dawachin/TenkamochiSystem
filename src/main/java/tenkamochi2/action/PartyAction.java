@@ -31,7 +31,7 @@ import tenkamochi2.entity.TDrinkParty;
 
 
 /**
- * なし
+ * 2357に追加編集
  * @author namiken
  *
  */
