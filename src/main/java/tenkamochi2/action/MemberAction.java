@@ -27,8 +27,9 @@ import tenkamochi2.form.MemberForm;
 import tenkamochi2.service.TMemberService;
 import tenkamochi2.entity.TMember;
 
-
-
+/**
+ * 会員情報の変更・追加・削除などを管理するクラス
+ */
 public class MemberAction {
 	
     /** Memberのアクションフォーム */
