@@ -31,8 +31,7 @@ import tenkamochi2.entity.TDrinkParty;
 
 
 /**
- * テストコメント追加しました(2014/02/24)<br />
- * 不要になり次第消してください
+ * なし
  * @author namiken
  *
  */
