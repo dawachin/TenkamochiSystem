@@ -55,9 +55,8 @@
 					<property name="interceptorName">"loginConfirmInterceptor"</property>
 					<!-- ここ重要(追加必須) -->
 					<property name="useLookupAdapter">true</property>
-
 					<!-- このActionだけセッションチェックを行なう -->
-					<initMethod name="addClassPattern">
+					<initMethod name="addIgnoreClassPattern">
 						<arg>"tenkamochi2.action"</arg>
 						<arg>"LoginAction"</arg>
 					</initMethod>

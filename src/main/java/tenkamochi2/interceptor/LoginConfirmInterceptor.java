@@ -33,7 +33,7 @@ public class LoginConfirmInterceptor extends AbstractInterceptor {
 	}
 	
 	/**
-	 * セッション上にDtoがあるか、あった場合その中にuserIDは保持されているか。
+	 * セッション上にDtoがあるか、あった場合その中にuserNameは保持されているか。
 	 * @return 上記の条件を両方満たしていればtrue
 	 */
 	private boolean isLoggedIn() {

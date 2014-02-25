@@ -8,11 +8,11 @@
 
 	<b>これがマイページ</b><br/>
 
-	メールアドレス<br/>
+	入力したユーザーネームが<br/>
 	ここに表示「<b>${userDto.userName}</b>」<br/>
 
 	<br/>
 
-	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>
+	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>|<a href="<c:url value="/member/"/>">メンバーページ</a>
 </body>
 </html>

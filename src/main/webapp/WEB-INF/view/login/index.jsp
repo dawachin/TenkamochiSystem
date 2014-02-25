@@ -9,7 +9,7 @@
 	<html:errors/>
 
 	<s:form action="/login/">
-		メールアドレス<html:text property="userName" /><br/>
+		ユーザーネーム<html:text property="userName" /><br/>
 		パスワード<html:password property="password" /><br/>
 		<br/>
 		<html:submit value="ログイン"/>
