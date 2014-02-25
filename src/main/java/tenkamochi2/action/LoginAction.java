@@ -29,15 +29,15 @@ public class LoginAction {
 	@Execute(validator = true, input = "/login/index.jsp")
 	public String index(){
 	
-	//入力されたuserNameとpassで、memberテーブルから検索する
-	TMember member = tMemberService.findById_and_pass(userform.userName, userform.password);
-	
-	//検索結果がnullじゃなかったらloginDtoに入力されたuserNameを格納する
-	if (member != null) {
-		        //セッションへの保存処理
-				//LoginDtoに値を入れるだけでsessionに保存される
-				Beans.copy(this.userform, this.userDto).execute();
-	}		
+		//入力されたuserNameとpassで、memberテーブルから検索する
+		TMember member = tMemberService.findById_and_pass(userform.userName, userform.password);
+		
+		//検索結果がnullじゃなかったらloginDtoに入力されたuserNameを格納する
+		if (member != null) {
+			//セッションへの保存処理
+			//LoginDtoに値を入れるだけでsessionに保存される
+			Beans.copy(this.userform, this.userDto).execute();
+		}
 	return "/mypage/?redirect=true";
 	}
 
