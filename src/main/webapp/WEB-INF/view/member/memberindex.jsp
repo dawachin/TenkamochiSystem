@@ -11,7 +11,7 @@
 	<c:forEach var="e" items="${memberItems}">
 		<tr>
 			<td>
-				${f:h(e.id) }
+				<a href="detail/${e.id}">${f:h(e.id) }</a>
 			</td>
 			<td>
 				${f:h(e.name) }

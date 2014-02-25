@@ -29,27 +29,47 @@ public class MemberAction {
 	@Resource
 	protected TMemberService tMemberService;
 	
-	//一覧表示
+	
+	
+	
+/* ------------------- 以下画面表示や登録処理のメソッド ------------------- */	
+	
+	/** 一覧画面表示 */
 	@Execute(validator = false)
 	public String index	() {
 		memberItems = tMemberService.findByIdList();
         return "memberindex.jsp";
     }
 	
-	//入力画面表示
+	/** 入力画面表示 */
 	@Execute(validator = false)
 	public String input	() {
         return "memberinput.jsp";
     }
 	
-	//登録処理＆登録完了画面表示
+	/** 登録処理＆完了画面表示 */
     @Execute(validator = false)
-	public String submit() {
-    	/** 登録処理 */
+	public String submit () {
+    	
+    	//フォームの内容をエンティティにコピーする
     	TMember emp = Beans.createAndCopy(TMember.class, memberForm).execute();
+    	//エンティティの内容をDBに追加する
     	tMemberService.insert(emp);
+    	
         return "memberconform.jsp";
 	}
+    
+    /** 詳細画面表示 */
+  	@Execute(validator = false, urlPattern = "detail/{id}")
+  	public String detail () {
+  		
+  		//urlPatternで渡されたパラメータ（id）を元にDBを検索し、該当のレコードをエンティティに入れる
+  		TMember memberentity = tMemberService.findById(memberForm.id);
+  		//エンティティの内容をフォームにコピー
+  		Beans.copy(memberentity, memberForm).execute();
+  		
+        return "memberdetail.jsp";
+    }
         
 }
 

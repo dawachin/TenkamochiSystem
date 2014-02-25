@@ -5,6 +5,8 @@ import org.seasar.struts.annotation.Required;
 
 public class MemberForm {
 	
+	public Integer id;
+	
 	/* 名前　*/
 	@Required
 	@Maxlength(maxlength=10)
