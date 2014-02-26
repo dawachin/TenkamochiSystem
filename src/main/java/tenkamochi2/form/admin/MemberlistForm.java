@@ -1,9 +1,9 @@
-package tenkamochi2.form;
+package tenkamochi2.form.admin;
 
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
 
-public class MemberForm {
+public class MemberlistForm {
 	
 	public Integer id;
 	

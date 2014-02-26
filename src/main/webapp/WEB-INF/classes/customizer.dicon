@@ -48,6 +48,22 @@
     <initMethod name="addAspectCustomizer">
       <arg>"actionMessagesThrowsInterceptor"</arg>
     </initMethod>
+    <!-- SESSIONのチェック設定はここから -->
+		<initMethod name="addCustomizer">
+			<arg>
+				<component class="org.seasar.framework.container.customizer.AspectCustomizer">
+					<property name="interceptorName">"loginConfirmInterceptor"</property>
+					<!-- ここ重要(追加必須) -->
+					<property name="useLookupAdapter">true</property>
+					<!-- このActionだけセッションチェックを行なう -->
+					<initMethod name="addIgnoreClassPattern">
+						<arg>"tenkamochi2.action"</arg>
+						<arg>"LoginAction"</arg>
+					</initMethod>
+				</component>
+			</arg>
+		</initMethod>
+		<!-- SESSIONのチェック設定はここまで -->
     <initMethod name="addCustomizer">
       <arg>traceCustomizer</arg>
     </initMethod>

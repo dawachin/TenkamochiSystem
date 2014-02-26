@@ -13,6 +13,6 @@
 
 	<br/>
 
-	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>|<a href="<c:url value="/admin/member/memberlist"/>">メンバーページ</a>
+	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>|<a href="<c:url value="/member/"/>">メンバーページ</a>
 </body>
 </html>
