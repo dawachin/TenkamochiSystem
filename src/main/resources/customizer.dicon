@@ -58,7 +58,7 @@
 					<!-- このActionだけセッションチェックを行なう -->
 					<initMethod name="addIgnoreClassPattern">
 						<arg>"tenkamochi2.action"</arg>
-						<arg>"LoginAction"</arg>
+						<arg>"loginAction"</arg>
 					</initMethod>
 				</component>
 			</arg>

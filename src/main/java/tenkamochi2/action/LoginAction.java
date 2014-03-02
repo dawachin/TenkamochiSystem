@@ -2,14 +2,10 @@ package tenkamochi2.action;
 
 import javax.annotation.Resource;
 
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 import org.seasar.struts.enums.SaveType;
-
-import com.mysql.jdbc.StringUtils;
 
 import tenkamochi2.dto.UserDto;
 import tenkamochi2.form.UserForm;
