@@ -1,4 +1,4 @@
-package tenkamochi2.action.branch.member;
+package tenkamochi2.action.admin;
 
 import java.util.List;
 

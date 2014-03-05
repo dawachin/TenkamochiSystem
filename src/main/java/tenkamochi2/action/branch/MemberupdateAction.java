@@ -1,4 +1,4 @@
-package tenkamochi2.action.admin.member;
+package tenkamochi2.action.branch;
 
 import javax.annotation.Resource;
 

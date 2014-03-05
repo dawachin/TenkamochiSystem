@@ -1,10 +1,9 @@
-package tenkamochi2.action.branch.member;
+package tenkamochi2.action.branch;
 
 import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
@@ -13,9 +12,9 @@ import tenkamochi2.service.TMemberService;
 import tenkamochi2.entity.TMember;
 
 /**
- * 会員情報の変更・追加・削除などを管理するクラス
+ * 会員情報の一覧を表示し、検索するクラス
  */
-public class MemberregistAction {
+public class MemberlistAction {
 	
     /** Memberのアクションフォーム */
 	@ActionForm
@@ -33,25 +32,13 @@ public class MemberregistAction {
 	
 	
 /* ------------------- 以下画面表示や登録処理のメソッド ------------------- */	
-
-	/** 入力画面表示 */
+	
+	/** 一覧画面表示 */
 	@Execute(validator = false)
 	public String index	() {
-        return "memberinput.jsp";
-    }
-	
-	/** 登録処理＆完了画面表示 */
-    @Execute(validator = false)
-	public String submit () {
-    	
-    	//フォームの内容をエンティティにコピーする
-    	TMember emp = Beans.createAndCopy(TMember.class, memberlistForm).execute();
-    	//エンティティの内容をDBに追加する
-    	tMemberService.insert(emp);
-    	
-        return "memberconform.jsp";
-	}
-        
+		memberItems = tMemberService.findByIdList();
+        return "memberindex.jsp";
+    } 
 }
 
 	

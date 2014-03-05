@@ -4,7 +4,7 @@
 	<title>マイページ</title>
 </head>
 <body>
-	<h1>マイページ</h1>
+	<h1>マイページ(admin)</h1>
 
 	<b>これがマイページ</b><br/>
 
@@ -13,6 +13,6 @@
 
 	<br/>
 
-	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>|<a href="<c:url value="/member/"/>">メンバーページ</a>
+	<a href="<c:url value="/"/>">トップページ</a>|<a href="<c:url value="/login/"/>">ログインページ</a>|<a href="<c:url value="/mypage/"/>">マイページ</a>|<a href="<c:url value="/memberlist/"/>">メンバーページ</a>
 </body>
 </html>

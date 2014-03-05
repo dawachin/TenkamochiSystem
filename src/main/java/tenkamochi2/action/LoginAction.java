@@ -5,8 +5,6 @@ import javax.annotation.Resource;
 import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
-import org.seasar.struts.enums.SaveType;
-
 import tenkamochi2.dto.UserDto;
 import tenkamochi2.form.UserForm;
 import tenkamochi2.service.TMemberService;
@@ -14,6 +12,7 @@ import tenkamochi2.entity.TMember;
 
 public class LoginAction {
 	
+	/** LoginActionのフォーム */
 	@Resource
 	@ActionForm
 	public UserForm userform;
@@ -31,7 +30,7 @@ public class LoginAction {
 	 * （ID・pass相違時のエラーメッセジはセッションに格納することでvalidatorに掛かって遷移した先でエラーメッセージが出るようにする。）
 	 * （正常遷移した後フォームの内容はremove(空にする)）
 	 */
-	@Execute(validator = true, input = "/login/index.jsp", saveErrors=SaveType.SESSION, removeActionForm=true)
+	@Execute(validator = true, input = "/login/index.jsp")
 	public String index(){
 	
 		//入力されたuserNameとpassで、memberテーブルから検索する
@@ -46,22 +45,4 @@ public class LoginAction {
 	return "/mypage/?redirect=true";
 	}
 }
-	
-	/** 検証用メソッド */
-//	public ActionMessages validateIndex(){
-//		ActionMessages errors = this.validateBase();
-//	    if(StringUtils.isNullOrEmpty(userform.userName)){
-//	        errors.add("userName" , new ActionMessage("ユーザーネームは必須", false));
-//	    }	
-//		return errors;	
-//	}
-//	
-//	public ActionMessages validateBase(){
-//	    ActionMessages errors = new ActionMessages();
-//	    if(StringUtils.isNullOrEmpty(userform.password)){
-//	        errors.add("password" , new ActionMessage("パスワードは必須", false));
-//		}
-//		return errors;
-//
-//		}
-//	}
+

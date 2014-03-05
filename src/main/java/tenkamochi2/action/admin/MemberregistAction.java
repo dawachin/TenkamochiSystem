@@ -1,4 +1,4 @@
-package tenkamochi2.action.admin.member;
+package tenkamochi2.action.admin;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import tenkamochi2.entity.TMember;
 /**
  * 会員情報の変更・追加・削除などを管理するクラス
  */
-public class MemberdetailAction {
+public class MemberregistAction {
 	
     /** Memberのアクションフォーム */
 	@ActionForm
@@ -34,19 +34,23 @@ public class MemberdetailAction {
 	
 /* ------------------- 以下画面表示や登録処理のメソッド ------------------- */	
 
-
-    
-    /** 詳細画面表示 */
-  	@Execute(validator = false, urlPattern = "detail/{id}")
-  	public String detail () {
-  		
-  		//urlPatternで渡されたパラメータ（id）を元にDBを検索し、該当のレコードをエンティティに入れる
-  		TMember memberentity = tMemberService.findById(memberlistForm.id);
-  		//エンティティの内容をフォームにコピー
-  		Beans.copy(memberentity, memberlistForm).execute();
-  		
-        return "memberdetail.jsp";
+	/** 入力画面表示 */
+	@Execute(validator = false)
+	public String index	() {
+        return "memberinput.jsp";
     }
+	
+	/** 登録処理＆完了画面表示 */
+    @Execute(validator = false)
+	public String submit () {
+    	
+    	//フォームの内容をエンティティにコピーする
+    	TMember emp = Beans.createAndCopy(TMember.class, memberlistForm).execute();
+    	//エンティティの内容をDBに追加する
+    	tMemberService.insert(emp);
+    	
+        return "memberconform.jsp";
+	}
         
 }
 
