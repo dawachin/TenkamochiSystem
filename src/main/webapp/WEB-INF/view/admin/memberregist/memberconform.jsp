@@ -100,7 +100,7 @@
 	</tr>
 </table>
 
-<a href="<c:url value="/admin/member/memberlist/"/>">新規登録</a>
+<a href="<c:url value="/admin/memberlist/"/>">一覧画面</a>
 </s:form>
 </body>
 </html>

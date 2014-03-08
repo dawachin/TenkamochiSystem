@@ -100,7 +100,7 @@
 </table>
 
 <html:submit property="index" value="一覧画面"/>
-<html:submit property="index" value="編集画面"/>
+<a href="<c:url value="/admin/memberupdate/update"/>/${id}">追加編集</a>
 
 </s:form>
 </body>

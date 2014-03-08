@@ -60,4 +60,12 @@ public class TMemberService extends AbstractService<TMember> {
     	where.eq(password(), password);
 		return select().where(where).getSingleResult();
 	}
+    /**
+     * バージョン列のチェックを行わない削除メソッド
+     * 
+     * @return 
+     */
+    public int deleteIgnoreVersion(TMember deletemember) {
+        return this.jdbcManager.delete(deletemember).ignoreVersion().execute();
+    }
 }

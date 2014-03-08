@@ -5,13 +5,17 @@
 </head>
 <body>
 <h1>メンバー一覧</h1>
+<s:form method="POST">
 <table border="1">
 <tr style="background-color:pink">
-<th>Id</th><th>名前</th><th>ハンドルネーム</th><th>性別</th><th>メールアドレス</th><th>所属部</th><th>入学年度</th><th>電話番号</th><th>役職</th><th>ID</th><th>Pass</th>
+<th>削除選択</th><th>Id</th><th>名前</th><th>ハンドルネーム</th><th>性別</th><th>メールアドレス</th><th>所属部</th><th>入学年度</th><th>電話番号</th><th>役職</th><th>ID</th><th>Pass</th>
 	<c:forEach var="e" items="${memberItems}">
 		<tr>
+		    <td>
+		    	<input type=checkbox name="delete_checks" value="${f:h(e.id)}">
+		    </td>
 			<td>
-				<a href="<c:url value="/admin/member/memberdetail/detail"/>/${e.id}">${f:h(e.id) }</a>
+				<a href="<c:url value="/admin/memberdetail/detail"/>/${e.id}">${f:h(e.id) }</a>
 			</td>
 			<td>
 				${f:h(e.name) }
@@ -46,10 +50,10 @@
 		</tr>
 	</c:forEach>
 </table>
-<s:form method="POST">
-<html:submit property="input" value="追加登録"/>
+<input type="submit" name="delete" value="削除"/>
 </s:form>
-<a href="<c:url value="/admin/member/memberregist/index"/>">新規登録</a>
+<a href="<c:url value="/admin/memberregist/index"/>">新規登録</a>
+
 
 
 </body>

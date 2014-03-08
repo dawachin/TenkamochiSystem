@@ -3,7 +3,9 @@ package tenkamochi2.action.admin;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts.util.TokenProcessor;
 import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
@@ -29,14 +31,18 @@ public class MemberregistAction {
 	@Resource
 	protected TMemberService tMemberService;
 	
-	
+	/** TMemberのサービスクラス */
+	public HttpServletRequest request;
 	
 	
 /* ------------------- 以下画面表示や登録処理のメソッド ------------------- */	
-
+	
+	
 	/** 入力画面表示 */
 	@Execute(validator = false)
 	public String index	() {
+		//2重登録防止のためのTokenの生成
+        TokenProcessor.getInstance().saveToken(request);
         return "memberinput.jsp";
     }
 	
@@ -44,11 +50,15 @@ public class MemberregistAction {
     @Execute(validator = false)
 	public String submit () {
     	
+    //2重登録防止のためTokenが正常な場合にのみ レコード追加処理を行う	
+    if (TokenProcessor.getInstance().isTokenValid(request, true)) {
+    	
     	//フォームの内容をエンティティにコピーする
     	TMember emp = Beans.createAndCopy(TMember.class, memberlistForm).execute();
     	//エンティティの内容をDBに追加する
     	tMemberService.insert(emp);
     	
+    	}	
         return "memberconform.jsp";
 	}
         

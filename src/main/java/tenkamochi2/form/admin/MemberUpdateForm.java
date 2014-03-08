@@ -3,7 +3,7 @@ package tenkamochi2.form.admin;
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
 
-public class MemberlistForm {
+public class MemberUpdateForm {
 	
 	public Integer id;
 	
@@ -71,8 +71,5 @@ public class MemberlistForm {
 	@Required
 	@Maxlength(maxlength=10)
 	public String password;
-	
-	/* 削除した項目のパラメータ　*/
-	public String[] delete_checks = new String[0];
 
 }

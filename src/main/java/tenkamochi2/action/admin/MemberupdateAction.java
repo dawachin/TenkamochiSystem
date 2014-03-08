@@ -6,6 +6,7 @@ import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
+import tenkamochi2.form.admin.MemberUpdateForm;
 import tenkamochi2.form.admin.MemberlistForm;
 import tenkamochi2.service.TMemberService;
 import tenkamochi2.entity.TMember;
@@ -15,8 +16,12 @@ import tenkamochi2.entity.TMember;
  */
 public class MemberupdateAction {
 	
-    /** Memberのアクションフォーム */
+    /** MemberUpdateのアクションフォーム */
 	@ActionForm
+	@Resource
+	 protected MemberUpdateForm memberupdateForm;
+	
+	 /** MemberUpdateのアクションフォーム */
 	@Resource
 	 protected MemberlistForm memberlistForm;
 	
@@ -35,21 +40,25 @@ public class MemberupdateAction {
   	public String update () {
   		
   		//urlPatternで渡されたパラメータ（id）を元にDBを検索し、該当のレコードをエンティティに入れる
-  		TMember memberentity = tMemberService.findById(memberlistForm.id);
+  		TMember memberentity = tMemberService.findById(memberupdateForm.id);
   		//エンティティの内容をフォームにコピー
-  		Beans.copy(memberentity, memberlistForm).execute();
+  		Beans.copy(memberentity, memberupdateForm).execute();
   		
         return "index.jsp";
     }
   	
   	
   	/** 編集登録処理＆完了画面表示 */
+  	@Execute(validator = false, urlPattern = "submit/{id}")
   	public String submit () {
   		
-  		//フォームの内容をエンティティにコピーする
-    	TMember emp = Beans.createAndCopy(TMember.class, memberlistForm).execute();
+  		//更新するレコードをidから検索してentityの形で呼び出す
+  		TMember member = tMemberService.findById(memberupdateForm.id);
+  		//呼び出されたレコードの情報に新しく入力されたフォームの情報をコピーする
+  		Beans.copy(memberupdateForm, member);
+
     	//エンティティの内容をDBに上書きする
-    	tMemberService.update(emp);
+    	tMemberService.update(member);
   		
         return "conform.jsp";
     }

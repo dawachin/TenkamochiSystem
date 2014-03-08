@@ -100,7 +100,8 @@
 	</tr>
 </table>
 
-<html:submit property="index" value="一覧画面"/>
+
+<a href="<c:url value="/admin/memberlist"/>">一覧画面</a>
 </s:form>
 </body>
 </html>

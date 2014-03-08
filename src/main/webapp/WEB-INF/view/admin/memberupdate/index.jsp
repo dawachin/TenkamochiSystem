@@ -4,10 +4,16 @@
 <title>Dolteng Auto Generated</title>
 </head>
 <body>
-<h1>メンバー入力画面予定地</h1>
+<h1>メンバー追加編集画面予定地</h1>
 <s:form method="POST">
 <table>
 	<tr>
+		<th>
+			id
+		</th>
+		<th>
+			${f:h(id)}
+		</th>
 		<th>
 			名前
 			<html:errors property="name" />
@@ -117,7 +123,8 @@
 		</td>
 	</tr>
 </table>
-<html:submit property="submit" value="登録"/>
+<a href="<c:url value="/admin/memberupdate/submit"/>/${id}">追加編集</a>
+<html:submit property="submit" value="編集"/>
 </s:form>
 </body>
 </html>

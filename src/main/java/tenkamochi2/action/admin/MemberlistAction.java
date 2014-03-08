@@ -39,6 +39,17 @@ public class MemberlistAction {
 		memberItems = tMemberService.findByIdList();
         return "memberindex.jsp";
     } 
+	
+	/** 一括削除機能 */
+	@Execute(validator = false)
+    public String delete() {
+        for( String delete_id : memberlistForm.delete_checks ) {
+            TMember deletemember = new TMember();
+            deletemember.id = Integer.valueOf(delete_id);
+            int affectedRowNum = tMemberService.deleteIgnoreVersion(deletemember);
+        }
+        return index();
+    }
 }
 
 	
