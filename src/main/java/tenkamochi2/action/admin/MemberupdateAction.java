@@ -49,13 +49,13 @@ public class MemberupdateAction {
   	
   	
   	/** 編集登録処理＆完了画面表示 */
-  	@Execute(validator = false, urlPattern = "submit/{id}")
+  	@Execute(validator = false)
   	public String submit () {
   		
   		//更新するレコードをidから検索してentityの形で呼び出す
   		TMember member = tMemberService.findById(memberupdateForm.id);
   		//呼び出されたレコードの情報に新しく入力されたフォームの情報をコピーする
-  		Beans.copy(memberupdateForm, member);
+  		Beans.copy(memberupdateForm, member).execute();
 
     	//エンティティの内容をDBに上書きする
     	tMemberService.update(member);

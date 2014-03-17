@@ -1,9 +1,14 @@
 eclipse.preferences.version=1
 encoding//src/main/resources/application_ja.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/clubdetail/clubdetail.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/clublist/clublist.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/clubregist/clubinput.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/clubregist/clubsubmit.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberdetail/memberdetail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberlist/memberindex.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberregist/memberconform.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/memberregist/memberinput.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberupdate/conform.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberupdate/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/mypage/index.jsp=UTF-8

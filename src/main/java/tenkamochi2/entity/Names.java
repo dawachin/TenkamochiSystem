@@ -1,8 +1,10 @@
 package tenkamochi2.entity;
 
 import javax.annotation.Generated;
+import tenkamochi2.entity.TClubNames._TClubNames;
 import tenkamochi2.entity.TDrinkPartyNames._TDrinkPartyNames;
 import tenkamochi2.entity.TMeetingPartyNames._TMeetingPartyNames;
+import tenkamochi2.entity.TMemberClubNames._TMemberClubNames;
 import tenkamochi2.entity.TMemberNames._TMemberNames;
 import tenkamochi2.entity.TPartyAttendNames._TPartyAttendNames;
 import tenkamochi2.entity.TPartyDrinkAttendNames._TPartyDrinkAttendNames;
@@ -11,8 +13,17 @@ import tenkamochi2.entity.TPartyDrinkAttendNames._TPartyDrinkAttendNames;
  * 名前クラスの集約です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2014/02/23 16:45:43")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2014/03/18 2:03:17")
 public class Names {
+
+    /**
+     * {@link TClub}の名前クラスを返します。
+     * 
+     * @return TClubの名前クラス
+     */
+    public static _TClubNames tClub() {
+        return new _TClubNames();
+    }
 
     /**
      * {@link TDrinkParty}の名前クラスを返します。
@@ -39,6 +50,15 @@ public class Names {
      */
     public static _TMemberNames tMember() {
         return new _TMemberNames();
+    }
+
+    /**
+     * {@link TMemberClub}の名前クラスを返します。
+     * 
+     * @return TMemberClubの名前クラス
+     */
+    public static _TMemberClubNames tMemberClub() {
+        return new _TMemberClubNames();
     }
 
     /**

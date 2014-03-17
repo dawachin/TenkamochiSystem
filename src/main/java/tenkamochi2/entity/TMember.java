@@ -1,9 +1,13 @@
 package tenkamochi2.entity;
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -13,7 +17,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_MEMBER")
-public class TMember {
+public class TMember implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
     /** idプロパティ */
     @Id
@@ -68,9 +74,13 @@ public class TMember {
     /** ID */
     @Column(nullable = true, unique = false)
     public String userName;
+    
     /** パスワード */
     @Column(nullable = true, unique = false)
     public String password;
-
+    
+    /** ★ */
+    @OneToMany(mappedBy = "tMember")
+    public List<TMemberClub> tMemberClubeList;
 
 }

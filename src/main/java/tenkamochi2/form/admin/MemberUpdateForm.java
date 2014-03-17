@@ -1,9 +1,16 @@
 package tenkamochi2.form.admin;
 
+import java.io.Serializable;
+
+import org.seasar.framework.container.annotation.tiger.Component;
+import org.seasar.framework.container.annotation.tiger.InstanceType;
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
 
-public class MemberUpdateForm {
+@Component(instance = InstanceType.SESSION) 
+public class MemberUpdateForm implements Serializable  {
+	
+	private static final long serialVersionUID = 1L;
 	
 	public Integer id;
 	

@@ -9,12 +9,6 @@
 <table>
 	<tr>
 		<th>
-			id
-		</th>
-		<th>
-			${f:h(id)}
-		</th>
-		<th>
 			名前
 			<html:errors property="name" />
 		</th>

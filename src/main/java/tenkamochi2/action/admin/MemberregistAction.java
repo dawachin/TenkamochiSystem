@@ -58,7 +58,7 @@ public class MemberregistAction {
     	//エンティティの内容をDBに追加する
     	tMemberService.insert(emp);
     	
-    	}	
+    }	
         return "memberconform.jsp";
 	}
         

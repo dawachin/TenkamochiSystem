@@ -7,7 +7,7 @@ import org.seasar.extension.jdbc.name.PropertyName;
  * {@link TPartyAttend}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/02/23 16:45:43")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
 public class TPartyAttendNames {
 
     /**
