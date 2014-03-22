@@ -4,7 +4,7 @@ import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
- * {@link TPartyDrinkAttend}のプロパティ名の集合です。
+ * {@link TParty}のプロパティ名の集合です。
  * 
  */
 @Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
@@ -49,7 +49,7 @@ public class TPartyDrinkAttendNames {
     /**
      * @author S2JDBC-Gen
      */
-    public static class _TPartyDrinkAttendNames extends PropertyName<TPartyDrinkAttend> {
+    public static class _TPartyDrinkAttendNames extends PropertyName<TParty> {
 
         /**
          * インスタンスを構築します。

@@ -9,7 +9,7 @@ import tenkamochi2.entity.TMemberNames._TMemberNames;
  * {@link TMemberClub}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TMemberClubNames {
 
     /**

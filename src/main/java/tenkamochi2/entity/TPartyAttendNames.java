@@ -2,12 +2,14 @@ package tenkamochi2.entity;
 
 import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
+import tenkamochi2.entity.TMemberNames._TMemberNames;
+import tenkamochi2.entity.TPartyNames._TPartyNames;
 
 /**
  * {@link TPartyAttend}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TPartyAttendNames {
 
     /**
@@ -20,30 +22,57 @@ public class TPartyAttendNames {
     }
 
     /**
-     * memberNumのプロパティ名を返します。
+     * memberIdのプロパティ名を返します。
      * 
-     * @return memberNumのプロパティ名
+     * @return memberIdのプロパティ名
      */
-    public static PropertyName<String> memberNum() {
-        return new PropertyName<String>("memberNum");
+    public static PropertyName<Integer> memberId() {
+        return new PropertyName<Integer>("memberId");
     }
 
     /**
-     * partyNumのプロパティ名を返します。
+     * partyIdのプロパティ名を返します。
      * 
-     * @return partyNumのプロパティ名
+     * @return partyIdのプロパティ名
      */
-    public static PropertyName<String> partyNum() {
-        return new PropertyName<String>("partyNum");
+    public static PropertyName<Integer> partyId() {
+        return new PropertyName<Integer>("partyId");
     }
 
     /**
-     * partyAttendFlragのプロパティ名を返します。
+     * drinkAtのプロパティ名を返します。
      * 
-     * @return partyAttendFlragのプロパティ名
+     * @return drinkAtのプロパティ名
      */
-    public static PropertyName<String> partyAttendFlrag() {
-        return new PropertyName<String>("partyAttendFlrag");
+    public static PropertyName<Integer> drinkAt() {
+        return new PropertyName<Integer>("drinkAt");
+    }
+
+    /**
+     * meetingAtのプロパティ名を返します。
+     * 
+     * @return meetingAtのプロパティ名
+     */
+    public static PropertyName<Integer> meetingAt() {
+        return new PropertyName<Integer>("meetingAt");
+    }
+
+    /**
+     * tMemberのプロパティ名を返します。
+     * 
+     * @return tMemberのプロパティ名
+     */
+    public static _TMemberNames tMember() {
+        return new _TMemberNames("tMember");
+    }
+
+    /**
+     * tPartyのプロパティ名を返します。
+     * 
+     * @return tPartyのプロパティ名
+     */
+    public static _TPartyNames tParty() {
+        return new _TPartyNames("tParty");
     }
 
     /**
@@ -89,30 +118,57 @@ public class TPartyAttendNames {
         }
 
         /**
-         * memberNumのプロパティ名を返します。
+         * memberIdのプロパティ名を返します。
          *
-         * @return memberNumのプロパティ名
+         * @return memberIdのプロパティ名
          */
-        public PropertyName<String> memberNum() {
-            return new PropertyName<String>(this, "memberNum");
+        public PropertyName<Integer> memberId() {
+            return new PropertyName<Integer>(this, "memberId");
         }
 
         /**
-         * partyNumのプロパティ名を返します。
+         * partyIdのプロパティ名を返します。
          *
-         * @return partyNumのプロパティ名
+         * @return partyIdのプロパティ名
          */
-        public PropertyName<String> partyNum() {
-            return new PropertyName<String>(this, "partyNum");
+        public PropertyName<Integer> partyId() {
+            return new PropertyName<Integer>(this, "partyId");
         }
 
         /**
-         * partyAttendFlragのプロパティ名を返します。
+         * drinkAtのプロパティ名を返します。
          *
-         * @return partyAttendFlragのプロパティ名
+         * @return drinkAtのプロパティ名
          */
-        public PropertyName<String> partyAttendFlrag() {
-            return new PropertyName<String>(this, "partyAttendFlrag");
+        public PropertyName<Integer> drinkAt() {
+            return new PropertyName<Integer>(this, "drinkAt");
+        }
+
+        /**
+         * meetingAtのプロパティ名を返します。
+         *
+         * @return meetingAtのプロパティ名
+         */
+        public PropertyName<Integer> meetingAt() {
+            return new PropertyName<Integer>(this, "meetingAt");
+        }
+
+        /**
+         * tMemberのプロパティ名を返します。
+         * 
+         * @return tMemberのプロパティ名
+         */
+        public _TMemberNames tMember() {
+            return new _TMemberNames(this, "tMember");
+        }
+
+        /**
+         * tPartyのプロパティ名を返します。
+         * 
+         * @return tPartyのプロパティ名
+         */
+        public _TPartyNames tParty() {
+            return new _TPartyNames(this, "tParty");
         }
     }
 }

@@ -3,12 +3,13 @@ package tenkamochi2.entity;
 import java.util.Date;
 import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
+import tenkamochi2.entity.TPartyNames._TPartyNames;
 
 /**
  * {@link TDrinkParty}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TDrinkPartyNames {
 
     /**
@@ -21,48 +22,48 @@ public class TDrinkPartyNames {
     }
 
     /**
-     * partyIdのプロパティ名を返します。
+     * drunkTimeのプロパティ名を返します。
      * 
-     * @return partyIdのプロパティ名
+     * @return drunkTimeのプロパティ名
      */
-    public static PropertyName<Integer> partyId() {
-        return new PropertyName<Integer>("partyId");
+    public static PropertyName<Date> drunkTime() {
+        return new PropertyName<Date>("drunkTime");
     }
 
     /**
-     * drunkPartyTimeのプロパティ名を返します。
+     * drunkRoomのプロパティ名を返します。
      * 
-     * @return drunkPartyTimeのプロパティ名
+     * @return drunkRoomのプロパティ名
      */
-    public static PropertyName<Date> drunkPartyTime() {
-        return new PropertyName<Date>("drunkPartyTime");
+    public static PropertyName<String> drunkRoom() {
+        return new PropertyName<String>("drunkRoom");
     }
 
     /**
-     * drunkPartyRoomのプロパティ名を返します。
+     * drunkMemoのプロパティ名を返します。
      * 
-     * @return drunkPartyRoomのプロパティ名
+     * @return drunkMemoのプロパティ名
      */
-    public static PropertyName<String> drunkPartyRoom() {
-        return new PropertyName<String>("drunkPartyRoom");
+    public static PropertyName<String> drunkMemo() {
+        return new PropertyName<String>("drunkMemo");
     }
 
     /**
-     * drunkPartyMemoのプロパティ名を返します。
+     * drunkDeadlineのプロパティ名を返します。
      * 
-     * @return drunkPartyMemoのプロパティ名
+     * @return drunkDeadlineのプロパティ名
      */
-    public static PropertyName<String> drunkPartyMemo() {
-        return new PropertyName<String>("drunkPartyMemo");
+    public static PropertyName<Date> drunkDeadline() {
+        return new PropertyName<Date>("drunkDeadline");
     }
 
     /**
-     * drunkPartyDeadlineのプロパティ名を返します。
+     * tPartyのプロパティ名を返します。
      * 
-     * @return drunkPartyDeadlineのプロパティ名
+     * @return tPartyのプロパティ名
      */
-    public static PropertyName<Date> drunkPartyDeadline() {
-        return new PropertyName<Date>("drunkPartyDeadline");
+    public static _TPartyNames tParty() {
+        return new _TPartyNames("tParty");
     }
 
     /**
@@ -108,48 +109,48 @@ public class TDrinkPartyNames {
         }
 
         /**
-         * partyIdのプロパティ名を返します。
+         * drunkTimeのプロパティ名を返します。
          *
-         * @return partyIdのプロパティ名
+         * @return drunkTimeのプロパティ名
          */
-        public PropertyName<Integer> partyId() {
-            return new PropertyName<Integer>(this, "partyId");
+        public PropertyName<Date> drunkTime() {
+            return new PropertyName<Date>(this, "drunkTime");
         }
 
         /**
-         * drunkPartyTimeのプロパティ名を返します。
+         * drunkRoomのプロパティ名を返します。
          *
-         * @return drunkPartyTimeのプロパティ名
+         * @return drunkRoomのプロパティ名
          */
-        public PropertyName<Date> drunkPartyTime() {
-            return new PropertyName<Date>(this, "drunkPartyTime");
+        public PropertyName<String> drunkRoom() {
+            return new PropertyName<String>(this, "drunkRoom");
         }
 
         /**
-         * drunkPartyRoomのプロパティ名を返します。
+         * drunkMemoのプロパティ名を返します。
          *
-         * @return drunkPartyRoomのプロパティ名
+         * @return drunkMemoのプロパティ名
          */
-        public PropertyName<String> drunkPartyRoom() {
-            return new PropertyName<String>(this, "drunkPartyRoom");
+        public PropertyName<String> drunkMemo() {
+            return new PropertyName<String>(this, "drunkMemo");
         }
 
         /**
-         * drunkPartyMemoのプロパティ名を返します。
+         * drunkDeadlineのプロパティ名を返します。
          *
-         * @return drunkPartyMemoのプロパティ名
+         * @return drunkDeadlineのプロパティ名
          */
-        public PropertyName<String> drunkPartyMemo() {
-            return new PropertyName<String>(this, "drunkPartyMemo");
+        public PropertyName<Date> drunkDeadline() {
+            return new PropertyName<Date>(this, "drunkDeadline");
         }
 
         /**
-         * drunkPartyDeadlineのプロパティ名を返します。
-         *
-         * @return drunkPartyDeadlineのプロパティ名
+         * tPartyのプロパティ名を返します。
+         * 
+         * @return tPartyのプロパティ名
          */
-        public PropertyName<Date> drunkPartyDeadline() {
-            return new PropertyName<Date>(this, "drunkPartyDeadline");
+        public _TPartyNames tParty() {
+            return new _TPartyNames(this, "tParty");
         }
     }
 }

@@ -5,7 +5,7 @@ import org.seasar.extension.jdbc.JdbcManager;
 import org.seasar.extension.unit.S2TestCase;
 
 /**
- * {@link TPartyDrinkAttend}のテストクラスです。
+ * {@link TParty}のテストクラスです。
  * 
  */
 @Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.EntityTestModelFactoryImpl"}, date = "2014/02/19 18:24:21")
@@ -30,6 +30,6 @@ public class TPartyDrinkAttendTest extends S2TestCase {
      * @throws Exception
      */
     public void testFindById() throws Exception {
-        jdbcManager.from(TPartyDrinkAttend.class).id(1).getSingleResult();
+        jdbcManager.from(TParty.class).id(1).getSingleResult();
     }
 }

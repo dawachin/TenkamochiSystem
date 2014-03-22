@@ -10,8 +10,11 @@ import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
+import tenkamochi2.form.admin.ClubForm;
 import tenkamochi2.form.admin.MemberlistForm;
+import tenkamochi2.service.TClubService;
 import tenkamochi2.service.TMemberService;
+import tenkamochi2.entity.TClub;
 import tenkamochi2.entity.TMember;
 
 /**
@@ -23,13 +26,24 @@ public class MemberregistAction {
 	@ActionForm
 	@Resource
 	 protected MemberlistForm memberlistForm;
+	 
+	/** Clubのフォーム */
+	@Resource
+	 protected ClubForm clubForm;
 	
 	 /** Memberのリスト */
 	public List<TMember> memberItems;
 	
+	/** Clubのリスト */
+	public List<TClub> clubItems;
+	
 	/** TMemberのサービスクラス */
 	@Resource
 	protected TMemberService tMemberService;
+	
+	/** TMemberのサービスクラス */
+	@Resource
+	protected TClubService tClubService;
 	
 	/** TMemberのサービスクラス */
 	public HttpServletRequest request;
@@ -41,8 +55,12 @@ public class MemberregistAction {
 	/** 入力画面表示 */
 	@Execute(validator = false)
 	public String index	() {
+		
 		//2重登録防止のためのTokenの生成
         TokenProcessor.getInstance().saveToken(request);
+        //部の選択肢のためにTClubからすべての部の選択肢を取得
+        this.clubItems = this.tClubService.findAllOrderById();
+        
         return "memberinput.jsp";
     }
 	

@@ -1,7 +1,11 @@
 package tenkamochi2.form.admin;
 
+import java.util.List;
+
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
+
+import tenkamochi2.entity.TClub;
 
 public class MemberlistForm {
 	

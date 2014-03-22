@@ -3,12 +3,13 @@ package tenkamochi2.entity;
 import java.util.Date;
 import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
+import tenkamochi2.entity.TPartyNames._TPartyNames;
 
 /**
  * {@link TMeetingParty}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TMeetingPartyNames {
 
     /**
@@ -21,66 +22,66 @@ public class TMeetingPartyNames {
     }
 
     /**
-     * drinkpartyIdのプロパティ名を返します。
+     * meetingNameのプロパティ名を返します。
      * 
-     * @return drinkpartyIdのプロパティ名
+     * @return meetingNameのプロパティ名
      */
-    public static PropertyName<Integer> drinkpartyId() {
-        return new PropertyName<Integer>("drinkpartyId");
+    public static PropertyName<String> meetingName() {
+        return new PropertyName<String>("meetingName");
     }
 
     /**
-     * partyNameのプロパティ名を返します。
+     * meetingNecessaryFlagのプロパティ名を返します。
      * 
-     * @return partyNameのプロパティ名
+     * @return meetingNecessaryFlagのプロパティ名
      */
-    public static PropertyName<String> partyName() {
-        return new PropertyName<String>("partyName");
+    public static PropertyName<Boolean> meetingNecessaryFlag() {
+        return new PropertyName<Boolean>("meetingNecessaryFlag");
     }
 
     /**
-     * partyNecessaryFlagのプロパティ名を返します。
+     * meetingTimeのプロパティ名を返します。
      * 
-     * @return partyNecessaryFlagのプロパティ名
+     * @return meetingTimeのプロパティ名
      */
-    public static PropertyName<Boolean> partyNecessaryFlag() {
-        return new PropertyName<Boolean>("partyNecessaryFlag");
+    public static PropertyName<Date> meetingTime() {
+        return new PropertyName<Date>("meetingTime");
     }
 
     /**
-     * partyTimeのプロパティ名を返します。
+     * meetingRoomのプロパティ名を返します。
      * 
-     * @return partyTimeのプロパティ名
+     * @return meetingRoomのプロパティ名
      */
-    public static PropertyName<Date> partyTime() {
-        return new PropertyName<Date>("partyTime");
+    public static PropertyName<String> meetingRoom() {
+        return new PropertyName<String>("meetingRoom");
     }
 
     /**
-     * partyRoomのプロパティ名を返します。
+     * meetingMemoのプロパティ名を返します。
      * 
-     * @return partyRoomのプロパティ名
+     * @return meetingMemoのプロパティ名
      */
-    public static PropertyName<String> partyRoom() {
-        return new PropertyName<String>("partyRoom");
+    public static PropertyName<String> meetingMemo() {
+        return new PropertyName<String>("meetingMemo");
     }
 
     /**
-     * partyMemoのプロパティ名を返します。
+     * meetingDeadlineのプロパティ名を返します。
      * 
-     * @return partyMemoのプロパティ名
+     * @return meetingDeadlineのプロパティ名
      */
-    public static PropertyName<String> partyMemo() {
-        return new PropertyName<String>("partyMemo");
+    public static PropertyName<Date> meetingDeadline() {
+        return new PropertyName<Date>("meetingDeadline");
     }
 
     /**
-     * partyDeadlineのプロパティ名を返します。
+     * tPartyのプロパティ名を返します。
      * 
-     * @return partyDeadlineのプロパティ名
+     * @return tPartyのプロパティ名
      */
-    public static PropertyName<Date> partyDeadline() {
-        return new PropertyName<Date>("partyDeadline");
+    public static _TPartyNames tParty() {
+        return new _TPartyNames("tParty");
     }
 
     /**
@@ -126,66 +127,66 @@ public class TMeetingPartyNames {
         }
 
         /**
-         * drinkpartyIdのプロパティ名を返します。
+         * meetingNameのプロパティ名を返します。
          *
-         * @return drinkpartyIdのプロパティ名
+         * @return meetingNameのプロパティ名
          */
-        public PropertyName<Integer> drinkpartyId() {
-            return new PropertyName<Integer>(this, "drinkpartyId");
+        public PropertyName<String> meetingName() {
+            return new PropertyName<String>(this, "meetingName");
         }
 
         /**
-         * partyNameのプロパティ名を返します。
+         * meetingNecessaryFlagのプロパティ名を返します。
          *
-         * @return partyNameのプロパティ名
+         * @return meetingNecessaryFlagのプロパティ名
          */
-        public PropertyName<String> partyName() {
-            return new PropertyName<String>(this, "partyName");
+        public PropertyName<Boolean> meetingNecessaryFlag() {
+            return new PropertyName<Boolean>(this, "meetingNecessaryFlag");
         }
 
         /**
-         * partyNecessaryFlagのプロパティ名を返します。
+         * meetingTimeのプロパティ名を返します。
          *
-         * @return partyNecessaryFlagのプロパティ名
+         * @return meetingTimeのプロパティ名
          */
-        public PropertyName<Boolean> partyNecessaryFlag() {
-            return new PropertyName<Boolean>(this, "partyNecessaryFlag");
+        public PropertyName<Date> meetingTime() {
+            return new PropertyName<Date>(this, "meetingTime");
         }
 
         /**
-         * partyTimeのプロパティ名を返します。
+         * meetingRoomのプロパティ名を返します。
          *
-         * @return partyTimeのプロパティ名
+         * @return meetingRoomのプロパティ名
          */
-        public PropertyName<Date> partyTime() {
-            return new PropertyName<Date>(this, "partyTime");
+        public PropertyName<String> meetingRoom() {
+            return new PropertyName<String>(this, "meetingRoom");
         }
 
         /**
-         * partyRoomのプロパティ名を返します。
+         * meetingMemoのプロパティ名を返します。
          *
-         * @return partyRoomのプロパティ名
+         * @return meetingMemoのプロパティ名
          */
-        public PropertyName<String> partyRoom() {
-            return new PropertyName<String>(this, "partyRoom");
+        public PropertyName<String> meetingMemo() {
+            return new PropertyName<String>(this, "meetingMemo");
         }
 
         /**
-         * partyMemoのプロパティ名を返します。
+         * meetingDeadlineのプロパティ名を返します。
          *
-         * @return partyMemoのプロパティ名
+         * @return meetingDeadlineのプロパティ名
          */
-        public PropertyName<String> partyMemo() {
-            return new PropertyName<String>(this, "partyMemo");
+        public PropertyName<Date> meetingDeadline() {
+            return new PropertyName<Date>(this, "meetingDeadline");
         }
 
         /**
-         * partyDeadlineのプロパティ名を返します。
-         *
-         * @return partyDeadlineのプロパティ名
+         * tPartyのプロパティ名を返します。
+         * 
+         * @return tPartyのプロパティ名
          */
-        public PropertyName<Date> partyDeadline() {
-            return new PropertyName<Date>(this, "partyDeadline");
+        public _TPartyNames tParty() {
+            return new _TPartyNames(this, "tParty");
         }
     }
 }

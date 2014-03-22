@@ -1,6 +1,7 @@
 package tenkamochi2.form.admin;
 
 import java.util.List;
+import java.util.Map;
 
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
@@ -29,5 +30,10 @@ public class ClubForm {
 	/* Clubのリスト */
 	public List<TClub> clubItems;
 	
+	/* Clubのマップ */
+	public List<Map<Integer,String>> clubMap;	
+	
+	/* 選択した項目のパラメータ　*/
+	public String[] club_checks = new String[0];
 
 }

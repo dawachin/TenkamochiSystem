@@ -1,14 +1,16 @@
 package tenkamochi2.entity;
 
-import java.util.Date;
 import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
+import tenkamochi2.entity.TDrinkPartyNames._TDrinkPartyNames;
+import tenkamochi2.entity.TMeetingPartyNames._TMeetingPartyNames;
+import tenkamochi2.entity.TPartyAttendNames._TPartyAttendNames;
 
 /**
- * {@link TMeetingParty}のプロパティ名の集合です。
+ * {@link TParty}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/02/19 22:41:57")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TPartyNames {
 
     /**
@@ -21,72 +23,54 @@ public class TPartyNames {
     }
 
     /**
-     * drinkpartyIdのプロパティ名を返します。
+     * drinkIdのプロパティ名を返します。
      * 
-     * @return drinkpartyIdのプロパティ名
+     * @return drinkIdのプロパティ名
      */
-    public static PropertyName<Integer> drinkpartyId() {
-        return new PropertyName<Integer>("drinkpartyId");
+    public static PropertyName<Integer> drinkId() {
+        return new PropertyName<Integer>("drinkId");
     }
 
     /**
-     * partyNameのプロパティ名を返します。
+     * meetingIdのプロパティ名を返します。
      * 
-     * @return partyNameのプロパティ名
+     * @return meetingIdのプロパティ名
      */
-    public static PropertyName<String> partyName() {
-        return new PropertyName<String>("partyName");
+    public static PropertyName<Integer> meetingId() {
+        return new PropertyName<Integer>("meetingId");
     }
 
     /**
-     * partyNecessaryFlagのプロパティ名を返します。
+     * drinkのプロパティ名を返します。
      * 
-     * @return partyNecessaryFlagのプロパティ名
+     * @return drinkのプロパティ名
      */
-    public static PropertyName<Boolean> partyNecessaryFlag() {
-        return new PropertyName<Boolean>("partyNecessaryFlag");
+    public static _TDrinkPartyNames drink() {
+        return new _TDrinkPartyNames("drink");
     }
 
     /**
-     * partyTimeのプロパティ名を返します。
+     * meetingのプロパティ名を返します。
      * 
-     * @return partyTimeのプロパティ名
+     * @return meetingのプロパティ名
      */
-    public static PropertyName<Date> partyTime() {
-        return new PropertyName<Date>("partyTime");
+    public static _TMeetingPartyNames meeting() {
+        return new _TMeetingPartyNames("meeting");
     }
 
     /**
-     * partyRoomのプロパティ名を返します。
+     * attendListのプロパティ名を返します。
      * 
-     * @return partyRoomのプロパティ名
+     * @return attendListのプロパティ名
      */
-    public static PropertyName<String> partyRoom() {
-        return new PropertyName<String>("partyRoom");
-    }
-
-    /**
-     * partyMemoのプロパティ名を返します。
-     * 
-     * @return partyMemoのプロパティ名
-     */
-    public static PropertyName<String> partyMemo() {
-        return new PropertyName<String>("partyMemo");
-    }
-
-    /**
-     * partyDeadlineのプロパティ名を返します。
-     * 
-     * @return partyDeadlineのプロパティ名
-     */
-    public static PropertyName<Date> partyDeadline() {
-        return new PropertyName<Date>("partyDeadline");
+    public static _TPartyAttendNames attendList() {
+        return new _TPartyAttendNames("attendList");
     }
 
     /**
      * @author S2JDBC-Gen
      */
-    public static class _TPartyNames extends PropertyName<TMeetingParty> {
+    public static class _TPartyNames extends PropertyName<TParty> {
 
         /**
          * インスタンスを構築します。
@@ -126,66 +110,48 @@ public class TPartyNames {
         }
 
         /**
-         * drinkpartyIdのプロパティ名を返します。
+         * drinkIdのプロパティ名を返します。
          *
-         * @return drinkpartyIdのプロパティ名
+         * @return drinkIdのプロパティ名
          */
-        public PropertyName<Integer> drinkpartyId() {
-            return new PropertyName<Integer>(this, "drinkpartyId");
+        public PropertyName<Integer> drinkId() {
+            return new PropertyName<Integer>(this, "drinkId");
         }
 
         /**
-         * partyNameのプロパティ名を返します。
+         * meetingIdのプロパティ名を返します。
          *
-         * @return partyNameのプロパティ名
+         * @return meetingIdのプロパティ名
          */
-        public PropertyName<String> partyName() {
-            return new PropertyName<String>(this, "partyName");
+        public PropertyName<Integer> meetingId() {
+            return new PropertyName<Integer>(this, "meetingId");
         }
 
         /**
-         * partyNecessaryFlagのプロパティ名を返します。
-         *
-         * @return partyNecessaryFlagのプロパティ名
+         * drinkのプロパティ名を返します。
+         * 
+         * @return drinkのプロパティ名
          */
-        public PropertyName<Boolean> partyNecessaryFlag() {
-            return new PropertyName<Boolean>(this, "partyNecessaryFlag");
+        public _TDrinkPartyNames drink() {
+            return new _TDrinkPartyNames(this, "drink");
         }
 
         /**
-         * partyTimeのプロパティ名を返します。
-         *
-         * @return partyTimeのプロパティ名
+         * meetingのプロパティ名を返します。
+         * 
+         * @return meetingのプロパティ名
          */
-        public PropertyName<Date> partyTime() {
-            return new PropertyName<Date>(this, "partyTime");
+        public _TMeetingPartyNames meeting() {
+            return new _TMeetingPartyNames(this, "meeting");
         }
 
         /**
-         * partyRoomのプロパティ名を返します。
-         *
-         * @return partyRoomのプロパティ名
+         * attendListのプロパティ名を返します。
+         * 
+         * @return attendListのプロパティ名
          */
-        public PropertyName<String> partyRoom() {
-            return new PropertyName<String>(this, "partyRoom");
-        }
-
-        /**
-         * partyMemoのプロパティ名を返します。
-         *
-         * @return partyMemoのプロパティ名
-         */
-        public PropertyName<String> partyMemo() {
-            return new PropertyName<String>(this, "partyMemo");
-        }
-
-        /**
-         * partyDeadlineのプロパティ名を返します。
-         *
-         * @return partyDeadlineのプロパティ名
-         */
-        public PropertyName<Date> partyDeadline() {
-            return new PropertyName<Date>(this, "partyDeadline");
+        public _TPartyAttendNames attendList() {
+            return new _TPartyAttendNames(this, "attendList");
         }
     }
 }

@@ -45,6 +45,9 @@
 	</tr>
 	<tr>
 		<th>
+		<html:select property="" size="5" multiple="multiple">
+			<html:options collection="clubItems" property="id" labelProperty="ClubName"/>
+		</html:select>
 			所属部
 			<html:errors property="department" />
 		</th>

@@ -3,12 +3,13 @@ package tenkamochi2.entity;
 import javax.annotation.Generated;
 import org.seasar.extension.jdbc.name.PropertyName;
 import tenkamochi2.entity.TMemberClubNames._TMemberClubNames;
+import tenkamochi2.entity.TPartyAttendNames._TPartyAttendNames;
 
 /**
  * {@link TMember}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/18 2:03:17")
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2014/03/23 0:38:56")
 public class TMemberNames {
 
     /**
@@ -144,6 +145,15 @@ public class TMemberNames {
      */
     public static _TMemberClubNames tMemberClubeList() {
         return new _TMemberClubNames("tMemberClubeList");
+    }
+
+    /**
+     * attendListのプロパティ名を返します。
+     * 
+     * @return attendListのプロパティ名
+     */
+    public static _TPartyAttendNames attendList() {
+        return new _TPartyAttendNames("attendList");
     }
 
     /**
@@ -312,6 +322,15 @@ public class TMemberNames {
          */
         public _TMemberClubNames tMemberClubeList() {
             return new _TMemberClubNames(this, "tMemberClubeList");
+        }
+
+        /**
+         * attendListのプロパティ名を返します。
+         * 
+         * @return attendListのプロパティ名
+         */
+        public _TPartyAttendNames attendList() {
+            return new _TPartyAttendNames(this, "attendList");
         }
     }
 }

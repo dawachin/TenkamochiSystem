@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,35 +27,36 @@ public class TMeetingParty {
     @Column(nullable = true, unique = true)
     public Integer id;
     
-    /* 連結する飲み会ID */
-	@Column(nullable = false, unique = false)
-	public Integer drinkpartyId;
-    
     /* 会議名　*/
     @Column(nullable = false, unique = false)
-	public String partyName;
+	public String meetingName;
 	
 	/* 会議の必須判定　*/
     @Column(nullable = false, unique = false)
-	public Boolean partyNecessaryFlag;
+	public Boolean meetingNecessaryFlag;
 	
 	/* 会議時間　*/
     @Column(nullable = false, unique = false)
     @Temporal(TemporalType.TIMESTAMP)
-	public Date partyTime;
+	public Date meetingTime;
 	
 	/* 会議場所　*/
     @Column(nullable = false, unique = false)
-	public String partyRoom;
+	public String meetingRoom;
 	
 	/* 会議内容　*/
     @Column(nullable = false, unique = false)
-	public String partyMemo;
+	public String meetingMemo;
 	
 	/* 会議出欠席締め切り時間　*/
     @Column(nullable = false, unique = false)
     @Temporal(TemporalType.TIMESTAMP)
-	public Date partyDeadline;
+	public Date meetingDeadline;
+    
+
+    @OneToOne
+    @JoinColumn(name = "ID",referencedColumnName = "MEETING_ID")
+    public TParty tParty;
  
 
 }
