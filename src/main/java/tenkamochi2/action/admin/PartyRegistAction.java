@@ -3,18 +3,12 @@ package tenkamochi2.action.admin;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import java.text.DateFormat;
-import java.util.Date;
-
 import org.apache.struts.util.TokenProcessor;
-import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
 
-import tenkamochi2.form.admin.ClubForm;
 import tenkamochi2.form.admin.PartyForm;
 import tenkamochi2.dto.UserDto;
-import tenkamochi2.entity.TClub;
 import tenkamochi2.entity.TDrinkParty;
 import tenkamochi2.entity.TMeetingParty;
 import tenkamochi2.entity.TParty;
