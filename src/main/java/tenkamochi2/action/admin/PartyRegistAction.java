@@ -1,8 +1,12 @@
 package tenkamochi2.action.admin;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.time.DateFormatUtils;
 import org.apache.struts.util.TokenProcessor;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
@@ -68,6 +72,8 @@ public class PartyRegistAction {
 	//2重登録防止のためTokenが正常な場合にのみ レコード追加処理を行う	
 	if (TokenProcessor.getInstance().isTokenValid(request, true)) {
 		
+		DateFormat foramt1=new SimpleDateFormat("yyyy/MM/dd");
+		
 		TMeetingParty meeting = new TMeetingParty();
 		meeting.meetingName = partyForm.meetingName;
 //		meeting.meetingNecessaryFlag = partyForm.meetingNecessaryFlag;
@@ -78,7 +84,7 @@ public class PartyRegistAction {
 		
 		TDrinkParty drink = new TDrinkParty();
 		drink.drunkRoom = partyForm.drunkRoom;
-//		drink.drunkTime = DateFormat.getDateInstance(partyForm.drunkTime);
+//		drink.drunkTime = DateFormatUtils.ISO_DATETIME_FORMAT.format();
 		drink.drunkMemo = partyForm.drunkMemo;
 //		drink.drunkDeadline =DateFormat.getDateInstance(partyForm.drunkDeadline);
 		tDrinkPartyService.insert(drink);

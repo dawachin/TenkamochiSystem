@@ -1,4 +1,5 @@
 package tenkamochi2.entity;
+import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -35,10 +36,15 @@ public class TMeetingParty {
     @Column(nullable = false, unique = false)
 	public Boolean meetingNecessaryFlag;
 	
-	/* 会議時間　*/
+	/* 会議日時　*/
     @Column(nullable = false, unique = false)
-    @Temporal(TemporalType.TIMESTAMP)
-	public Date meetingTime;
+    @Temporal(TemporalType.DATE)
+	public Date meetingDay;
+    
+    /* 会議時間　*/
+    @Column(nullable = false, unique = false)
+    @Temporal(TemporalType.TIME)
+	public Time meetingTime;
 	
 	/* 会議場所　*/
     @Column(nullable = false, unique = false)
@@ -48,10 +54,15 @@ public class TMeetingParty {
     @Column(nullable = false, unique = false)
 	public String meetingMemo;
 	
-	/* 会議出欠席締め切り時間　*/
+	/* 会議出欠席締め切り日　*/
     @Column(nullable = false, unique = false)
-    @Temporal(TemporalType.TIMESTAMP)
-	public Date meetingDeadline;
+    @Temporal(TemporalType.DATE)
+	public Date meetingDeadlineDay;
+    
+    /* 会議出欠席締め切り時間　*/
+    @Column(nullable = false, unique = false)
+    @Temporal(TemporalType.TIME)
+	public Time meetingDeadlineTime;
     
 
     @OneToOne
