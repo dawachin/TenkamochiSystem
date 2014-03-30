@@ -1,6 +1,7 @@
 package tenkamochi2.form.admin;
 
 import java.util.List;
+import java.util.Map;
 
 import org.seasar.struts.annotation.Maxlength;
 import org.seasar.struts.annotation.Required;
@@ -78,5 +79,13 @@ public class MemberlistForm {
 	
 	/* 削除した項目のパラメータ　*/
 	public String[] delete_checks = new String[0];
-
+	
+	/** 部のリスト **/
+	public List<TClub> clubList;
+	
+	/** 部のマップ **/
+	public Map<String, String> clubMap;
+	
+	/** 選択した部 **/
+	public String[] clubListCheck;
 }

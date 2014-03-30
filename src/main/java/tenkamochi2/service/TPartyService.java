@@ -1,18 +1,19 @@
 package tenkamochi2.service;
 
 import java.util.List;
-import javax.annotation.Generated;
-import tenkamochi2.entity.TMeetingParty;
 
+import javax.annotation.Generated;
+
+import tenkamochi2.entity.TParty;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 import static tenkamochi2.entity.TPartyNames.*;
 
 /**
- * {@link TMeetingParty}のサービスクラスです。
+ * {@link TParty}のサービスクラスです。
  * 
  */
 @Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.ServiceModelFactoryImpl"}, date = "2014/02/18 6:58:23")
-public class TPartyService extends AbstractService<TMeetingParty> {
+public class TPartyService extends AbstractService<TParty> {
 
     /**
      * 識別子でエンティティを検索します。
@@ -21,7 +22,7 @@ public class TPartyService extends AbstractService<TMeetingParty> {
      *            識別子
      * @return エンティティ
      */
-    public TMeetingParty findById(Integer id) {
+    public TParty findById(Integer id) {
         return select().id(id).getSingleResult();
     }
     
@@ -32,7 +33,7 @@ public class TPartyService extends AbstractService<TMeetingParty> {
      *            識別子
      * @return エンティティ
      */
-    public List<TMeetingParty>findById() {
+    public List<TParty>findById() {
         return select().orderBy(desc(id())).getResultList();
     }
 
@@ -41,7 +42,7 @@ public class TPartyService extends AbstractService<TMeetingParty> {
      * 
      * @return エンティティのリスト
      */
-    public List<TMeetingParty> findAllOrderById() {
+    public List<TParty> findAllOrderById() {
         return select().orderBy(asc(id())).getResultList();
     }
 }

@@ -12,6 +12,7 @@ encoding//src/main/webapp/WEB-INF/view/admin/memberregist/memberinput.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberupdate/conform.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/memberupdate/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/admin/mypage/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/admin/partyRegist/partyinput.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/login/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/view/top/top.jsp=UTF-8

@@ -29,6 +29,10 @@ public class TParty {
     @Column(nullable = true, unique = true)
     public Integer id;
     
+    /** 登録者のID */
+    @Column(nullable = true)
+    public Integer registId;
+    
     /** tDrink_Idプロパティ */
     @Column(nullable = true, unique = true)
     public Integer drinkId;

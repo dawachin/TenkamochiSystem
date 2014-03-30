@@ -1,10 +1,12 @@
 package tenkamochi2.action.admin;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.collections.map.HashedMap;
 import org.apache.struts.util.TokenProcessor;
 import org.seasar.framework.beans.util.Beans;
 import org.seasar.struts.annotation.ActionForm;
@@ -61,6 +63,13 @@ public class MemberregistAction {
         //部の選択肢のためにTClubからすべての部の選択肢を取得
         this.clubItems = this.tClubService.findAllOrderById();
         
+        //部のマップ作成
+        memberlistForm.clubList = tClubService.findAll();
+        memberlistForm.clubMap = new HashMap<String,String>();
+        for ( TClub club : memberlistForm.clubList) {
+        	memberlistForm.clubMap.put(club.id.toString(), club.ClubName);
+        }
+        
         return "memberinput.jsp";
     }
 	
@@ -74,8 +83,7 @@ public class MemberregistAction {
     	//フォームの内容をエンティティにコピーする
     	TMember emp = Beans.createAndCopy(TMember.class, memberlistForm).execute();
     	//エンティティの内容をDBに追加する
-    	tMemberService.insert(emp);
-    	
+    	tMemberService.insert(emp);	
     }	
         return "memberconform.jsp";
 	}

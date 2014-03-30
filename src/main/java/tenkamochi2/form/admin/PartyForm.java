@@ -38,16 +38,16 @@ public class PartyForm {
 	/* 会議出欠席締め切り時間　*/
 	public String meetingDeadline;
 	
-	/* 会議出欠席締め切り時間　*/
+	/* 飲み会の時間　*/
 	public String drunkTime;
 	
-	/* 会議出欠席締め切り時間　*/
+	/*　飲み会の場所　*/
 	public String drunkRoom;
 	
-	/* 会議出欠席締め切り時間　*/
+	/* 飲み会の内容　*/
 	public String drunkMemo;
 	
-	/* 会議出欠席締め切り時間　*/
+	/* 飲み会のめ切り時間　*/
 	public String drunkDeadline;
 	
 }

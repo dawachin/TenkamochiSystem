@@ -45,9 +45,11 @@
 	</tr>
 	<tr>
 		<th>
-		<html:select property="" size="5" multiple="multiple">
-			<html:options collection="clubItems" property="id" labelProperty="ClubName"/>
-		</html:select>
+			<ul>
+				<c:forEach items="${clubList}"ver="clubListCheck">
+					<li><input type="checkbox" name="clubListCheck" value="${clubListCheck.id }" id="clubListCheck${clubListCheck.id}"/><label for="clubListCheck${clubListCheck.id }">${f:h(clubListCheck.name)}/</label></li>
+				</c:forEach>
+			</ul>
 			所属部
 			<html:errors property="department" />
 		</th>
